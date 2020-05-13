@@ -1,4 +1,4 @@
-# Cabal-URI
+# Cabal URI
 Specification for Cabal URIs (aka cabal keys, or identified by `cabal://`)
 
 Cabal's basic URI scheme is composed of the `cabal://` _protocol identifier_, followed by a 64 character long `base16`-encoded identifier. **See the _Basic_  scheme below.**
