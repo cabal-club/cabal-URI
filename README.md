@@ -20,7 +20,7 @@ Additionally, there is support in [Cabal's chat clients](https://github.com/caba
 
 In these cases, the section following the protocol identifier is a domain name where the cabal key may be fetched. This is accomplished either by quering a well-known record at the domain name, i.e. the file `http[s]://example.com/.well-known/cabal`, for the domain `example.com`, or by querying a TXT record on the domain. The TXT record should be named `cabalkey` and its contents should conform to the _Basic_ and _Extended_ schemes above.
 
-The first line of the `.well-known/cabal` file contains the cabal key, as described by the _Basic_ and _Extended_ schemes above. The second line contains a [TTL](https://en.wikipedia.org/wiki/Time_to_live) in milliseconds, in the format of `ttl=<milliseconds>`.
+The first line of the `.well-known/cabal` file contains the cabal key, as described by the _Basic_ and _Extended_ schemes above. The second line contains a [TTL](https://en.wikipedia.org/wiki/Time_to_live) in milliseconds, in the format of `ttl=<milliseconds>`. Additional newline-delimited "key=value" entries may be defined, but as of yet Cabal only has support for the mentioned TTL.
 
 **DNS**: `cabal://<valid-domain.tld>`, e.g. `cabal://example.com` 
 
